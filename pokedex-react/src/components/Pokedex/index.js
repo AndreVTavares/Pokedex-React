@@ -3,12 +3,13 @@ import Pokecard from '../Pokecard/index';
 import { pokeClasses } from '../../PokeClasses'
 import './style.css';
 
-const Pokedex = () => {
+const Pokedex = ({ handleClick }) => {
     const cells = pokeClasses.map(pokeClass => {
         return (
             <Pokecard
             key={pokeClass.id}
-            pokeClass={pokeClass} 
+            pokeClass={pokeClass}
+            handleClick={handleClick} 
             />
         )
     })

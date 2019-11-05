@@ -3,11 +3,11 @@ import sprites from '../../assets/sprites.png'
 import './style.css';
 
 
-const Pokecard = ({ pokeClass }) => {
+const Pokecard = ({ pokeClass, handleClick }) => {
     const { id, backgroundPosition } = pokeClass;
     const styles = { backgroundImage: `url(${sprites})`, backgroundPosition }
     return(
-        <button style={styles} className="poke-card"></button>
+        <button style={styles} onClick={() => handleClick(id)} className="poke-card"></button>
     )
      
 }
