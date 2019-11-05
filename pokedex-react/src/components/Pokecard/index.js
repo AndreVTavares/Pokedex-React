@@ -1,11 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
+import sprites from '../../assets/sprites.png'
+import './style.css';
 
-// import { Container } from './styles';
 
-export default class Pokecard extends Component {
-  render() {
-    return <div />;
-  }
+const Pokecard = ({ pokeClass }) => {
+    const { id, backgroundPosition } = pokeClass;
+    const styles = { backgroundImage: `url(${sprites})`, backgroundPosition }
+    return(
+        <button style={styles} className="poke-card"></button>
+    )
+     
 }
+
+export default Pokecard;
+
 
 
